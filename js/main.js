@@ -1,2 +1,2 @@
 
-import {baseURL} from "./constants.js";
+import {baseURL,fetchSettings} from "./constants.js";
