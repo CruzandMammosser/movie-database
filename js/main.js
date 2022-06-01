@@ -1,1 +1,2 @@
-import {baseURL} from "./const-variables";
+
+import {baseURL} from "./constants.js";
