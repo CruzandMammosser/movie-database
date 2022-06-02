@@ -27,25 +27,25 @@ function stopLoadingAnimation() {
     $('footer').removeClass('d-none')
 }
 
-const htmlElements = data.map(function (o) {
-    return `
-         <div class= "card">
-        <div class= "card-header">Title: $(o.title)</div>
-            <div class= "card-body"></div>
-            <div class="card-footer">Rating: $(o.ratings)</div>
-            <div class="card-footer">Id: $(o.id)</div>
-            <button type="button" class="btn btn-primary"><span bi bi-trash"></span></button>
-        </div>
-<br>
-        
-`;
-
-)
-};
-
-$("#movies").append(htmlElements)
-    
-    
+// const htmlElements = data.map(function (o) {
+//     return `
+//          <div class= "card">
+//         <div class= "card-header">Title: $(o.title)</div>
+//             <div class= "card-body"></div>
+//             <div class="card-footer">Rating: $(o.ratings)</div>
+//             <div class="card-footer">Id: $(o.id)</div>
+//             <button type="button" class="btn btn-primary"><span bi bi-trash"></span></button>
+//         </div>
+// <br>
+//
+// `;
+//
+// )
+// };
+//
+// $("#movies").append(htmlElements)
+//
+//
     
     
     
