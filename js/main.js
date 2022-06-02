@@ -12,6 +12,16 @@ fetch('https://helpful-mercurial-eyebrow.glitch.me/movies')
     // })
 
     });
+
+function onSuccess(data, status, jqXhr) {
+    // display the requested data to the user
+}
+
+function onFail(jqXhr, status, error) {
+    // tell the user something went wrong, and to try again later
+}
+
+
 function stopLoadingAnimation() {
     $('.loading').addClass('d-none')
     $('footer').removeClass('d-none')
