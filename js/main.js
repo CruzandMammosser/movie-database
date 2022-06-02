@@ -26,3 +26,25 @@ function stopLoadingAnimation() {
     $('#loading').addClass('hide')
     $('footer').removeClass('d-none')
 }
+
+const htmlElements = data.map(function(e) {
+    return `
+        <div class= "card">Title: $(o.title)</div>
+            <div class= "card-body"></div>
+            <div class="card-footer">Rating: $(o.ratings)</div>
+            <div class="card-footer">Id: $(o.id)</div>
+            <button type="button" class="btn btn-primary"><span bi bi-trash"</button>
+        </div>
+        <br>
+        
+        `;
+        )};
+        
+        $("#movies").append(htmlElements)
+    
+    
+    
+    
+    
+    
+
