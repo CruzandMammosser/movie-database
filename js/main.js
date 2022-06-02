@@ -23,6 +23,6 @@ function onFail(jqXhr, status, error) {
 
 
 function stopLoadingAnimation() {
-    $('.loading').addClass('d-none')
+    $('#loading').addClass('hide')
     $('footer').removeClass('d-none')
 }
