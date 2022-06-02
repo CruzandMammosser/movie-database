@@ -2,16 +2,16 @@ fetch('https://helpful-mercurial-eyebrow.glitch.me/movies')
     .then(function (res) {
         console.log(res)
         return res.json();
-    }).then(function (data){
-        for (let i = 0; i<data.length; i++) {
-            console.log(data[i].title)
-        }
-        $("#loading-image").addClass('hide')
+    }).then(function (data) {
+    for (let i = 0; i < data.length; i++) {
+        console.log(data[i].title)
+    }
+    $("#loading-image").addClass('hide')
     // $(window).on('load', function () {
     //     $('#loading').hide();
     // })
 
-    });
+});
 
 function onSuccess(data, status, jqXhr) {
     // display the requested data to the user
@@ -27,20 +27,23 @@ function stopLoadingAnimation() {
     $('footer').removeClass('d-none')
 }
 
-const htmlElements = data.map(function(e) {
+const htmlElements = data.map(function (o) {
     return `
-        <div class= "card">Title: $(o.title)</div>
+         <div class= "card">
+        <div class= "card-header">Title: $(o.title)</div>
             <div class= "card-body"></div>
             <div class="card-footer">Rating: $(o.ratings)</div>
             <div class="card-footer">Id: $(o.id)</div>
-            <button type="button" class="btn btn-primary"><span bi bi-trash"</button>
+            <button type="button" class="btn btn-primary"><span bi bi-trash"></span></button>
         </div>
-        <br>
+<br>
         
-        `;
-        )};
-        
-        $("#movies").append(htmlElements)
+`;
+
+)
+};
+
+$("#movies").append(htmlElements)
     
     
     
