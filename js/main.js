@@ -26,7 +26,7 @@ function stopLoadingAnimation() {
     $('#loading').addClass('hide')
     $('footer').removeClass('d-none')
 }
-
+//
 // const htmlElements = data.map(function (o) {
 //     return `
 //          <div class= "card">
@@ -40,14 +40,16 @@ function stopLoadingAnimation() {
 //
 // `;
 //
-// )
-// };
+// )};
 //
 // $("#movies").append(htmlElements)
 //
-//
-    
-    
+$("#add-movie").click(function(e) {
+    e.preventDefault();
+    $('#addID').val(parseInt(allMovies[allMovies.length-1].id)+1)
+})
+
+
     
     
 
