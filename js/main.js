@@ -1,4 +1,5 @@
-fetch('https://helpful-mercurial-eyebrow.glitch.me/movies')
+const url = 'https://helpful-mercurial-eyebrow.glitch.me/movies'
+fetch(url)
     .then(function (res) {
         console.log(res)
         return res.json();
@@ -27,27 +28,23 @@ function stopLoadingAnimation() {
     $('footer').removeClass('d-none')
 }
 //
-// const htmlElements = data.map(function (o) {
-//     return `
-//          <div class= "card">
-//         <div class= "card-header">Title: $(o.title)</div>
-//             <div class= "card-body"></div>
-//             <div class="card-footer">Rating: $(o.ratings)</div>
-//             <div class="card-footer">Id: $(o.id)</div>
-//             <button type="button" class="btn btn-primary"><span bi bi-trash"></span></button>
-//         </div>
-// <br>
-//
-// `;
-//
-// )};
-//
-// $("#movies").append(htmlElements)
-//
-$("#add-movie").click(function(e) {
-    e.preventDefault();
-    $('#addID').val(parseInt(allMovies[allMovies.length-1].id)+1)
-})
+const htmlElements = data.map(function (o) {
+    return `
+         <div class= "card">
+        <div class= "card-header">Title: $(o.title)</div>
+            <div class= "card-body"></div>
+            <div class="card-footer">Rating: $(o.ratings)</div>
+            <div class="card-footer">Id: $(o.id)</div>
+            <button type="button" class="btn btn-primary"><span bi bi-trash"></span></button></div>
+<br>
+
+`;
+
+});
+
+$("#movies").append(htmlElements)
+
+
 
 
     
